@@ -10,12 +10,12 @@ include 'templates/header.php';
     <div class="producto">
         <h3>Café Colombia</h3>
         <p>Aromático, suave, perfecto para cualquier momento.</p>
-        <p>Precio: $8.00</p>
+        <p>Precio: 8.00€</p>
     </div>
     <div class="producto">
         <h3>Café Etiopía</h3>
         <p>Notas afrutadas y cuerpo intenso.</p>
-        <p>Precio: $9.50</p>
+        <p>Precio: 9.50€</p>
     </div>
 </div>
 
