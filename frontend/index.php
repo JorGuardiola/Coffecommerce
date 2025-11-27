@@ -7,80 +7,46 @@ require_once __DIR__ . '/../db/connection.php';
 
 <main>
 
-  <!-- HERO -->
-  <section class="header">
-    <div class="container">
-      <div class="hero-text-block">
-        <h1>Descubre el café de especialidad que mereces</h1>
-        <p>Selección cuidada, tostado reciente y envío rápido a tu puerta.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CARRUSEL -->
-  <section class="container" style="margin-top:4rem;">
+  <!-- CARRUSEL DE VALORES (tal como en tu index.html) -->
+  <section class="tag-carousel">
     <div class="carousel-header">
-      <h2>Nuestros cafés</h2>
+      <h2>Nuestros valores</h2>
       <div class="carousel-controls">
-        <button class="carousel-btn" id="prevBtn">&lt;</button>
-        <button class="carousel-btn" id="nextBtn">&gt;</button>
+        <button id="btn-left" class="carousel-btn">&lt;</button>
+        <button id="btn-right" class="carousel-btn">&gt;</button>
       </div>
     </div>
 
-    <div class="tag-carousel">
-      <div class="carousel-track">
-        <article class="tag-card tag-card--1">
-          <span class="tag-more">Origen único</span>
-          <h3>Etiopía Sidamo</h3>
-        </article>
+    <div class="carousel-track">
+      <div class="tag-card" style="--bg: url('../assets/img/tarjeta1.jpg')">
+        <span class="tag-more">SOSTENIBILIDAD</span>
+        <h3>Sostenibilidad en cada grano, respeto en cada sorbo</h3>
+      </div>
 
-        <article class="tag-card tag-card--2">
-          <span class="tag-more">Blend casa</span>
-          <h3>House Espresso</h3>
-        </article>
+      <div class="tag-card" style="--bg: url('../assets/img/tarjeta2.jpg')">
+        <span class="tag-more">INNOVACION</span>
+        <h3>Innovación constante para una experiencia excepcional</h3>
+      </div>
 
-        <article class="tag-card tag-card--3">
-          <span class="tag-more">Descafeinado</span>
-          <h3>Decaf Colombia</h3>
-        </article>
+      <div class="tag-card" style="--bg: url('../assets/img/tarjeta3.jpg')">
+        <span class="tag-more">EXPERIENCIA</span>
+        <h3>Un mundo de sabores fresco y tostado para disfrutar</h3>
+      </div>
+
+      <div class="tag-card" style="--bg: url('../assets/img/tarjeta4.jpg')">
+        <span class="tag-more">CERCANIA</span>
+        <h3>Conectando con cada taza, cerca de ti</h3>
+      </div>
+
+      <div class="tag-card" style="--bg: url('../assets/img/tarjeta5.jpg')">
+        <span class="tag-more">RESPETO</span>
+        <h3>Café ético, sabor extraordinario</h3>
       </div>
     </div>
   </section>
 
-  <!-- NUESTROS VALORES -->
+  <!-- LISTADO DE PRODUCTOS DESDE BD -->
   <section class="container" style="margin:6rem auto;">
-    <h2 class="center-text">Nuestros valores</h2>
-
-    <div class="valores-grid">
-      <article class="valor-card">
-        <h3>Sostenibilidad</h3>
-        <p>Sostenibilidad en cada grano, respeto en cada sorbo.</p>
-      </article>
-
-      <article class="valor-card">
-        <h3>Innovación</h3>
-        <p>Innovación constante para una experiencia excepcional.</p>
-      </article>
-
-      <article class="valor-card">
-        <h3>Experiencia</h3>
-        <p>Un mundo de sabores fresco y tostado para disfrutar.</p>
-      </article>
-
-      <article class="valor-card">
-        <h3>Cercanía</h3>
-        <p>Conectando con cada taza, cerca de ti.</p>
-      </article>
-
-      <article class="valor-card">
-        <h3>Respeto</h3>
-        <p>Café ético, sabor extraordinario.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- PRODUCTOS DESDE BD -->
-  <section class="container" style="margin-bottom:6rem;">
     <h2 class="center-text">Cafés destacados</h2>
 
     <div class="productos-grid">
