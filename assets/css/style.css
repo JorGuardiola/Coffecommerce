@@ -242,10 +242,11 @@ h3 { font-size: 2.8rem; }
 
 
 /* =====================
-   CARRUSEL BASE
+   CARRUSEL BASE (MODIFICADO PARA ANIMACIÓN)
 ===================== */
 .tag-carousel {
-    overflow: hidden;
+    position: relative; 
+    overflow: hidden; /* Oculta el contenido duplicado que no cabe */
     width: 100%;
     padding: 3rem 0;
 }
@@ -253,16 +254,24 @@ h3 { font-size: 2.8rem; }
 .carousel-track {
    display: flex;
    gap: 2rem;
-   width: max-content;
-   animation: none;
-   transform: none;
+   width: max-content; /* Es crucial para que todo el contenido (duplicado) quepa en una línea */
+   animation: scroll 35s linear infinite; /* Aplicar animación: 35s, lineal, infinito */
+   transition: none; /* Desactivar transiciones que interfieren con la animación */
 }
 
-/* Animación horizontal infinita (por si luego la activas) */
+/* Pausar animación al pasar el ratón */
+.tag-carousel:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+/* Definición de la animación de desplazamiento */
 @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    /* Mueve el 50% de la longitud total, que es la longitud original del contenido */
+    100% { transform: translateX(-50%); } 
 }
+
+/* Ya no es necesario ocultar scrollbar en tag-carousel si overflow es hidden */
 
 
 /* =====================
@@ -282,6 +291,7 @@ h3 { font-size: 2.8rem; }
     background-size: cover;
     background-position: center;
     box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    flex-shrink: 0; 
 }
 
 /* Mini etiqueta arriba izquierda */
@@ -336,35 +346,9 @@ h3 { font-size: 2.8rem; }
     padding-left: 3rem;
 }
 
-/* Contenedor de botones */
-.carousel-controls {
-    display: flex;
-    gap: 1rem;
-}
-
-/* Botones */
+/* Botones (Ocultar completamente, ya no existen en el HTML) */
 .carousel-btn {
-    width: 3.4rem;
-    height: 3.4rem;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    font-size: 1.8rem;
-    background: rgba(var(--white), 0.6);
-    backdrop-filter: blur(6px);
-    color: rgb(var(--black));
-    transition: 0.25s ease;
-}
-
-.carousel-btn:hover {
-    background: rgba(var(--white), 0.9);
-}
-
-/* Ajuste móvil */
-@media (max-width: 767px) {
-    .carousel-header h2 {
-        font-size: 1.8rem;
-    }
+    display: none;
 }
 
 
@@ -523,4 +507,64 @@ h3 { font-size: 2.8rem; }
         align-items: flex-start;
         gap: 1.5rem;
     }
+}
+
+/* =====================
+   SECCIÓN PRODUCTOS
+===================== */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+.producto-card {
+    border: 1px solid var(--secondary-100);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.producto-card img {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.producto-card h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: rgb(var(--primary-600));
+}
+
+.producto-card .precio {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(var(--secondary-800));
+    margin-bottom: 2rem;
+}
+
+.btn-add-cart {
+    background-color: rgb(var(--primary-500));
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn-add-cart:hover {
+    background-color: rgb(var(--primary-700));
 }
