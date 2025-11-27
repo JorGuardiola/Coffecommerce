@@ -18,27 +18,27 @@ require_once __DIR__ . '/../db/connection.php';
     </div>
 
     <div class="carousel-track">
-      <div class="tag-card" style="--bg: url('../assets/img/tarjeta1.jpg')">
+      <div class="tag-card" style="--bg: url('../assets/img/tarjeta1.jpg');">
         <span class="tag-more">SOSTENIBILIDAD</span>
         <h3>Sostenibilidad en cada grano, respeto en cada sorbo</h3>
       </div>
 
-      <div class="tag-card" style="--bg: url('../assets/img/tarjeta2.jpg')">
+      <div class="tag-card" style="--bg: url('../assets/img/tarjeta2.jpg');">
         <span class="tag-more">INNOVACION</span>
         <h3>Innovación constante para una experiencia excepcional</h3>
       </div>
 
-      <div class="tag-card" style="--bg: url('../assets/img/tarjeta3.jpg')">
+      <div class="tag-card" style="--bg: url('../assets/img/tarjeta3.jpg');">
         <span class="tag-more">EXPERIENCIA</span>
         <h3>Un mundo de sabores fresco y tostado para disfrutar</h3>
       </div>
 
-      <div class="tag-card" style="--bg: url('../assets/img/tarjeta4.jpg')">
+      <div class="tag-card" style="--bg: url('../assets/img/tarjeta4.jpg');">
         <span class="tag-more">CERCANIA</span>
         <h3>Conectando con cada taza, cerca de ti</h3>
       </div>
 
-      <div class="tag-card" style="--bg: url('../assets/img/tarjeta5.jpg')">
+      <div class="tag-card" style="--bg: url('../assets/img/tarjeta5.jpg');">
         <span class="tag-more">RESPETO</span>
         <h3>Café ético, sabor extraordinario</h3>
       </div>
