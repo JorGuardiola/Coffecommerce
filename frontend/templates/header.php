@@ -1,0 +1,64 @@
+<?php
+// frontend/templates/header.php
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cafetera</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+
+    <!-- BARRA SUPERIOR -->
+    <div class="barra">
+
+      <!-- LOGO -->
+      <div class="img-logo">
+        <img src="../assets/img/logo.png" alt="Logo La Cafetera">
+      </div>
+
+      <!-- NAV -->
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="index.php">Productos</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Recetas</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- ICONOS -->
+      <div class="icons-bar">
+        <button class="icon-header">
+          <img src="../assets/img/buscar.png" alt="Buscar">
+        </button>
+        <button class="icon-header" onclick="window.location.href='login.php'">
+          <img src="../assets/img/login.png" alt="Login">
+        </button>
+        <button class="icon-header" onclick="window.location.href='cart.php'">
+          <img src="../assets/img/carrito.png" alt="Carrito">
+        </button>
+      </div>
+
+    </div>
+
+    <!-- TEXTO HERO -->
+    <div class="hero-text-block">
+      <h1>Llevamos el café de especialidad del campo a la taza</h1>
+      <p>Desde 1994 seleccionando los mejores cafés del mundo para llevarlos a tu taza.</p>
+    </div>
+
+  </div>
+</header>
